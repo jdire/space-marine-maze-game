@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Marine Maze</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="ui-overlay">
+            <div class="level-display">Level: <span id="current-level">1</span></div>
+            <div class="controls-info">Use arrow keys to navigate</div>
+            <div class="audio-controls">
+                <label for="volume-slider">Volume:</label>
+                <input type="range" id="volume-slider" min="0" max="100" value="30">
+                <button id="mute-toggle">🔊</button>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="game-over" class="game-over hidden">
+            <h2>Mission Complete!</h2>
+            <p>Level <span id="completed-level"></span> cleared!</p>
+            <button id="next-level">Next Mission</button>
+        </div>
+        <div id="game-start" class="game-start">
+            <h1>Space Marine Maze</h1>
+            <p>Navigate through hostile territory to reach the extraction zone.</p>
+            <button id="audio-test" style="margin-right: 10px;">Test Audio</button>
+            <button id="start-game">Begin Mission</button>
+        </div>
+    </div>
+    
+    <script src="audio.js"></script>
+    <script src="maze.js"></script>
+    <script src="player.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
